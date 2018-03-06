@@ -1,19 +1,31 @@
 <div class="ui raised container segment">
-  <form *ngIf="!error" class="ui form">
+  <form *ngIf="!error" class="ui form" (ngSubmit)="onSubmit()" #questionForm="ngForm">
     <div class="field">
     <label>{{ question?.question }}</label>
+      <!--
+        The input type is selected according to the type of response expected.
+        These input fields are disabled once the form has been sumbitted.
+      -->
+
       <input *ngIf="question?.reponse_type=='t'"
-        [ngModel]="question?.answer" (ngModelChange)="question.answer = $event" type="text"/>
-      <select *ngIf="question?.reponse_type=='l'" class="form-control" id="answer"
-        [ngModel]="question?.answer" (ngModelChange)="question.answer = $event" required>
+        [ngModel]="question?.answer" (ngModelChange)="question.answer = $event"
+        type="text"
+        name="text-answer"
+        [disabled]="submitted"/>
+
+      <select *ngIf="question?.reponse_type=='l'" class="form-control" id="answer" [disabled]="submitted"
+        [ngModel]="question?.answer" (ngModelChange)="question.answer = $event" required name="list_answer">
         <option *ngFor="let opt of question?.options" [value]="opt">{{opt}}</option>
       </select>
+
     </div>
-    <button class="ui button" type="submit">Enregistrer ma réponse</button>
+    <button class="ui button" type="submit" [disabled]="!questionForm.form.valid">
+      Enregistrer ma réponse
+    </button>
   </form>
 
   <!-- Unknown error -->
-  <div *ngIf="error && error_type=='default'" class="ui negative message" #after404>
+  <div *ngIf="error && error_type=='default'" class="ui negative message">
     <i class="close icon"></i>
     <div class="header">
       An error occured

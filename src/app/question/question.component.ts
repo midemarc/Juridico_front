@@ -14,6 +14,7 @@ export class QuestionComponent implements OnInit {
   private error: boolean;
   private error_type: string;
   private question_id: number;
+  private submitted: boolean;
 
   constructor(private questionService: QuestionService) { }
 
@@ -22,6 +23,7 @@ export class QuestionComponent implements OnInit {
     // -1 for not set (not in the range of HTTP status codes)
     this.error_type = '';
     this.question_id = 1;
+    this.submitted = false;
     this.getQuestion();
   }
 
@@ -51,6 +53,10 @@ export class QuestionComponent implements OnInit {
     }
     console.log(error);
     // this.error_code = error.status;
+  }
+
+  onSubmit(): void {
+    this.submitted = true;
   }
 
 }
