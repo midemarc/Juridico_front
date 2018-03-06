@@ -12,12 +12,12 @@ export class QuestionService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getHero(): Promise<Question> {
+  getQuestion(question_id: number): Promise<Question> {
     // question19: text
     // question1: list
     // question3: date
     return this.httpClient
-      .get<Question>('http://localhost:8000/juridico/api/questions1')
+      .get<Question>('http://localhost:8000/juridico/api/questions' + question_id)
       .toPromise()
       .catch(this.handleError);
   }

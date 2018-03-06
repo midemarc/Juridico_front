@@ -13,6 +13,7 @@ export class QuestionComponent implements OnInit {
   private question: Question;
   private error: boolean;
   private error_type: string;
+  private question_id: number;
 
   constructor(private questionService: QuestionService) { }
 
@@ -20,11 +21,12 @@ export class QuestionComponent implements OnInit {
     this.error = false;
     // -1 for not set (not in the range of HTTP status codes)
     this.error_type = '';
+    this.question_id = 1;
     this.getQuestion();
   }
 
   getQuestion(): void {
-    this.questionService.getHero().then(
+    this.questionService.getQuestion(this.question_id).then(
       question => this.question = {
         qid: question['qid'],
         nom: question['nom'],
