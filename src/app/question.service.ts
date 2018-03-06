@@ -4,29 +4,18 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
 import { Question } from './question';
-
+import { HttpClient } from '@angular/common/http';
 // import { MessageService } from './message.service';
 
 @Injectable()
 export class QuestionService {
 
-  nameQuestion: Question = {
-    id: '1',
-    text: 'Quel est ton nom ?',
-    type: 'text'
-  };
+  constructor(private httpClient: HttpClient) { }
 
-  happyQuestion: Question = {
-    id: '2',
-    text: 'Es-tu heureux ?',
-    type: 'bool'
-  };
-
-  constructor() { }
-
-  getHero(): Observable<Question> {
-    // Todo: send the message _after_ fetching the heroes
-    // this.messageService.add('HeroService: fetched heroes');
-    return of(this.nameQuestion);
+  getHero() {
+    // question19: text
+    // question1: list
+    // question3: date
+    return this.httpClient.get<Question>('http://localhost:8000/juridico/api/question1');
   }
 }

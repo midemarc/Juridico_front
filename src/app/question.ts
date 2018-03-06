@@ -1,5 +1,8 @@
 export class Question {
-    id: string;
-    text: string;
-    type: string;
+    qid: number;
+    nom: string;
+    question: string;
+    reponse_type: string;
+    options: string[];
+    answer: object;
 }

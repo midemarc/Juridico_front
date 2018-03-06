@@ -1,9 +1,15 @@
 <div class="ui raised container segment">
-  <form class="ui form">
+  <div class="ui form">
     <div class="field">
-    <label>{{ question.text }}</label>
-      <input [(ngModel)]="question.answer" type="text">
+    <label>{{ question?.question }}</label>
+      <input *ngIf="question?.reponse_type=='t'"
+        [ngModel]="question?.answer" (ngModelChange)="question.answer = $event" type="text"/>
+      <select *ngIf="question?.reponse_type=='l'" class="form-control" id="answer"
+        [ngModel]="question?.answer" (ngModelChange)="question.answer = $event" required>
+        <option *ngFor="let opt of question?.options" [value]="opt">{{opt}}</option>
+      </select>
     </div>
     <button class="ui button" type="submit">Enregistrer ma réponse</button>
-  </form>
+  </div>
 </div>
+{{question?.answer}}

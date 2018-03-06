@@ -9,7 +9,7 @@ import { QuestionService } from '../question.service';
 })
 export class QuestionComponent implements OnInit {
 
-  question: Question;
+  private question: Question;
 
   constructor(private questionService: QuestionService) { }
 
@@ -19,7 +19,14 @@ export class QuestionComponent implements OnInit {
 
   getQuestion(): void {
     this.questionService.getHero().subscribe(
-      question => this.question = question
+      question => this.question = {
+        qid: question['qid'],
+        nom: question['nom'],
+        question: question['question'],
+        reponse_type: question['reponse_type'],
+        options: question['options'],
+        answer: null
+      }
     );
   }
 
