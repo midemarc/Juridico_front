@@ -16,6 +16,6 @@ export class QuestionService {
     // question19: text
     // question1: list
     // question3: date
-    return this.httpClient.get<Question>('http://localhost:8000/juridico/api/question1');
+    return this.httpClient.get<Question>('http://localhost:8000/juridico/api/questions1');
   }
 }
