@@ -1,6 +1,7 @@
 # Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+To install angular, use `npm install -g @angular/cli`
 
 ## Development server
 
