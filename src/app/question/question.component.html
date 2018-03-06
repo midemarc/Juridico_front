@@ -1,5 +1,5 @@
 <div class="ui raised container segment">
-  <div class="ui form">
+  <form *ngIf="!error" class="ui form">
     <div class="field">
     <label>{{ question?.question }}</label>
       <input *ngIf="question?.reponse_type=='t'"
@@ -10,6 +10,35 @@
       </select>
     </div>
     <button class="ui button" type="submit">Enregistrer ma réponse</button>
+  </form>
+
+  <!-- Unknown error -->
+  <div *ngIf="error && error_type=='default'" class="ui negative message" #after404>
+    <i class="close icon"></i>
+    <div class="header">
+      An error occured
+    </div>
+    <p>Please try again later</p>
   </div>
+
+  <!-- 404 -->
+  <div *ngIf="error && error_type=='404'" class="ui negative message">
+    <i class="close icon"></i>
+    <div class="header">
+      Page not found
+    </div>
+    <p>The page corresponding to this ressource does not exist</p>
+  </div>
+
+    <!-- cannot reach server -->
+    <div *ngIf="error && error_type=='cannot_reach_server'" class="ui negative message">
+      <i class="close icon"></i>
+      <div class="header">
+        The server cannot be reached
+      </div>
+      <p>Please check your internet connection or try again later.
+        If the problem persists, please use the feedback form to let us know.</p>
+    </div>
 </div>
 {{question?.answer}}
+{{submitted}}
