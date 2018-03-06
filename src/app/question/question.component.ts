@@ -40,16 +40,16 @@ export class QuestionComponent implements OnInit {
 
   handleError(error: HttpErrorResponse): void {
     this.error = true;
-    if(error.status == 404) {
-      this.error_type = '404'
-    } else if (error.statusText == 'Unknown Error') {
+    if (error.status === 404) {
+      this.error_type = '404';
+    } else if (error.statusText === 'Unknown Error') {
       // Suposedly can't connect to server.
       // TODO:  Check that other errors don't do that
-      this.error_type = 'cannot_reach_server'
+      this.error_type = 'cannot_reach_server';
     } else {
-      this.error_type = 'default'
+      this.error_type = 'default';
     }
-    console.log(error)
+    console.log(error);
     // this.error_code = error.status;
   }
 
