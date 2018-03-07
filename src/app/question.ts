@@ -4,5 +4,5 @@ export class Question {
     question: string;
     reponse_type: string;
     options: string[];
-    answer: object;
+    answer: string;
 }

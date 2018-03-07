@@ -19,6 +19,7 @@ export class QuestionService {
     return this.httpClient
       .get<Question>('http://localhost:8000/juridico/api/questions' + question_id)
       .toPromise()
+      .then()
       .catch(this.handleError);
   }
 

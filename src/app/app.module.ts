@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionService } from './question.service';
+import { ReponseService } from './reponse.service';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { QuestionService } from './question.service';
     HttpClientModule,
   ],
   providers: [
-    QuestionService
+    QuestionService,
+    ReponseService
   ],
   bootstrap: [AppComponent]
 })

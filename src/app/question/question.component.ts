@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Question } from '../question';
 import { QuestionService } from '../question.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ReponseService } from '../reponse.service';
+import { Reponse } from '../reponse';
 
 @Component({
   selector: 'app-question',
@@ -16,7 +18,10 @@ export class QuestionComponent implements OnInit {
   private question_id: number;
   private submitted: boolean;
 
-  constructor(private questionService: QuestionService) { }
+  constructor(
+    private questionService: QuestionService,
+    private reponseService: ReponseService
+  ) { }
 
   ngOnInit() {
     this.error = false;
@@ -57,6 +62,19 @@ export class QuestionComponent implements OnInit {
 
   onSubmit(): void {
     this.submitted = true;
+    const reponse: Reponse = {
+      question: this.question.qid,
+      requete: 1,
+      reponse: this.question.answer
+    };
+    let reponse_saved;
+    let this_error;
+    this.reponseService.saveReponse(reponse)
+    .then(
+      data => reponse_saved = data,
+      error => this_error = error
+    );
+    const a = 1;
   }
 
 }
