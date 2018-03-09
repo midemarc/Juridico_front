@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Question } from '../question';
 import { QuestionService } from '../question.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -11,7 +11,7 @@ import { Reponse } from '../reponse';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-
+  @Input() idx: number;
   private question: Question;
   private error: boolean;
   private error_type: string;
@@ -33,7 +33,7 @@ export class QuestionComponent implements OnInit {
   }
 
   getQuestion(): void {
-    this.questionService.getQuestion(this.question_id).then(
+    this.questionService.getQuestion(this.idx).then(
       question => this.question = {
         qid: question['qid'],
         nom: question['nom'],

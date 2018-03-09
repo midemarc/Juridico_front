@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionService } from './question.service';
 import { ReponseService } from './reponse.service';
+import { InterfaceComponent } from './interface/interface.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent
+    QuestionComponent,
+    InterfaceComponent
   ],
   imports: [
     BrowserModule,
