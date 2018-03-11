@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Question } from '../question';
 import { QuestionService } from '../question.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -12,6 +12,7 @@ import { Reponse } from '../reponse';
 })
 export class QuestionComponent implements OnInit {
   @Input() idx: number;
+  @Output() answerSubmittedEvent = new EventEmitter<number>();
   private question: Question;
   private error: boolean;
   private error_type: string;
@@ -71,7 +72,11 @@ export class QuestionComponent implements OnInit {
     let this_error;
     this.reponseService.saveReponse(reponse)
     .then(
-      data => reponse_saved = data,
+      data => {
+        reponse_saved = data;
+        console.log('reponse saved : ' + JSON.stringify(reponse_saved));
+        this.answerSubmittedEvent.emit(reponse_saved.repid);
+      },
       error => this_error = error
     );
     const a = 1;

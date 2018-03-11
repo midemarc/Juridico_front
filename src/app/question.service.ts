@@ -4,13 +4,17 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
 import { Question } from './question';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 // import { MessageService } from './message.service';
 
 @Injectable()
 export class QuestionService {
 
-  constructor(private httpClient: HttpClient) { }
+  private requeteID: number;
+
+  constructor(private httpClient: HttpClient) {
+    this.requeteID = 1;
+  }
 
   getQuestion(question_id: number): Promise<Question> {
     // question19: text
@@ -20,6 +24,21 @@ export class QuestionService {
       .get<Question>('http://localhost:8000/juridico/api/questions' + question_id)
       .toPromise()
       .then()
+      .catch(this.handleError);
+  }
+
+  getNextQuestionID(previousQuestionAnswerID: number): Promise<number> {
+    const params = new HttpParams()
+      .set('reqid', String(this.requeteID))
+      .set('repid', String(previousQuestionAnswerID))
+      .set('id_only', String('1')
+    );
+    const options = {
+      params
+    };
+    return this.httpClient
+      .get<number>('http://localhost:8000/juridico/api/next_question', options)
+      .toPromise()
       .catch(this.handleError);
   }
 
