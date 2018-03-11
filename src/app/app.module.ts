@@ -10,13 +10,16 @@ import { QuestionComponent } from './question/question.component';
 import { QuestionService } from './question.service';
 import { ReponseService } from './reponse.service';
 import { InterfaceComponent } from './interface/interface.component';
+import { ResultsComponent } from './results/results.component';
+import { ResultsService } from './results.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
-    InterfaceComponent
+    InterfaceComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { InterfaceComponent } from './interface/interface.component';
   ],
   providers: [
     QuestionService,
-    ReponseService
+    ReponseService,
+    ResultsService
   ],
   bootstrap: [AppComponent]
 })

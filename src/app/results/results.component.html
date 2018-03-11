@@ -1,0 +1,90 @@
+<div class="ui raised container segment">
+  <sui-accordion [closeOthers]="false">
+    <sui-accordion-panel [isOpen]="true">
+      <div title>
+        <i class="dropdown icon"></i>
+        Directions
+      </div>
+      <div content>
+        <div *ngFor="let dir of directions">
+          <div class="ui raised segment">
+            <div class="content">
+              <div class="meta">
+                <span class="url">{{dir.url}}</span>
+                <span class="quand">{{dir.quand}}</span>
+              </div>
+              <div class="description">
+                {{dir.description}} {{dir.commentaires}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sui-accordion-panel>
+
+    <sui-accordion-panel [isOpen]="true">
+      <div title>
+        <i class="dropdown icon"></i>
+        Documentation
+      </div>
+      <div content>
+        <div class="ui items">
+          <div *ngFor="let doc of documentations" class="item">
+            <div class="ui raised segment">
+              <div class="content">
+                <a class="header">
+                  {{doc.nom}}
+                </a>
+                <div class="meta">
+                  <span class="url">{{doc.url}}</span>
+                  <span class="quand">{{doc.quand}}</span>
+                </div>
+                <div class="description">
+                  {{doc.description}} {{doc.commentaires}}
+                </div>
+                <!-- <div class="ui bottom attached label">
+                   <span>{{doc.nom_source}}</span>
+                  <span>{{doc.categorie_educaloi}}</span>
+                </div> -->
+
+                <div class="extra">
+                  <span>{{doc.nom_source}}</span>
+                  <span>{{doc.categorie_educaloi}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sui-accordion-panel>
+
+    <sui-accordion-panel [isOpen]="true">
+      <div title>
+        <i class="dropdown icon"></i>
+        Organisations
+      </div>
+      <div content>
+        <div class="ui items">
+          <div *ngFor="let org of organisations" class="item">
+            <div class="ui raised segment">
+              <div class="content">
+                <a class="header">
+                  {{org.nom}}
+                </a>
+                <div class="meta">
+                  <span class="url">{{org.url}}</span>
+                  <span class="courriel">{{org.courriel}}</span>
+                  <span class="code_postal">{{org.code_postal}}</span>
+                  <span class="addresse">{{org.adresse}}</span>
+                </div>
+                <div class="description">
+                  {{org.description}} {{org.commentaires}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sui-accordion-panel>
+  </sui-accordion>
+</div>

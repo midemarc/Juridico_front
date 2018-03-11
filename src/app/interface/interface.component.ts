@@ -12,9 +12,11 @@ import { Question } from '../question';
 export class InterfaceComponent implements OnInit {
   private question_ids: number[];
   private questions: Question[];
+  private is_end: boolean;
 
   constructor(private questionService: QuestionService) {
     this.question_ids = [1];
+    this.is_end = false;
   }
 
   ngOnInit() {
@@ -32,7 +34,7 @@ export class InterfaceComponent implements OnInit {
 
         // Not a question, end
         if (question_id === -1) {
-
+          this.is_end = true;
         } else {
           this.question_ids.push(question_id);
         }
