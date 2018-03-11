@@ -29,7 +29,13 @@ export class InterfaceComponent implements OnInit {
     this.questionService.getNextQuestionID(previousQuestionAnswerID)
       .then(data => {
         const question_id = data['question_id'];
-        this.question_ids.push(question_id);
+
+        // Not a question, end
+        if (question_id === -1) {
+
+        } else {
+          this.question_ids.push(question_id);
+        }
       });
   }
 
