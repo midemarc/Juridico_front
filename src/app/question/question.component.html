@@ -18,6 +18,17 @@
         <option *ngFor="let opt of question?.options" [value]="opt">{{opt}}</option>
       </select>
 
+      <div *ngIf="question?.reponse_type=='d'" class="ui left icon input">
+        <i class="calendar icon"></i>
+        <input suiDatepicker
+          [ngModel]="question?.answer"
+          (ngModelChange)="question.answer = $event"
+          pickerMode="date"
+          pickerFirstDayOfWeek="1"
+          [pickerUseNativeOnMobile]="true"
+          name="date">
+        {{question?.answer}}
+      </div>
     </div>
     <button class="ui button" type="submit" [disabled]="!questionForm.form.valid">
       Enregistrer ma réponse
