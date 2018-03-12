@@ -12,6 +12,7 @@ import { ReponseService } from './reponse.service';
 import { InterfaceComponent } from './interface/interface.component';
 import { ResultsComponent } from './results/results.component';
 import { ResultsService } from './results.service';
+import { RequestComponent } from './request/request.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ResultsService } from './results.service';
     AppComponent,
     QuestionComponent,
     InterfaceComponent,
-    ResultsComponent
+    ResultsComponent,
+    RequestComponent
   ],
   imports: [
     BrowserModule,

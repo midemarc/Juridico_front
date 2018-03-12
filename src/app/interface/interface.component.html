@@ -4,6 +4,8 @@
   </h1>
 </div>
 
+<app-request (processedRequest)="getNextQuestion($event)"></app-request>
+
 <div *ngFor="let id of question_ids">
   <app-question [idx]="id" (answerSubmittedEvent)="getNextQuestion($event)"></app-question>
 </div>

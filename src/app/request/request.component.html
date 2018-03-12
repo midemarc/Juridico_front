@@ -1,0 +1,11 @@
+<div class="ui raised container segment">
+  <form (ngSubmit)="onSubmit()" class="ui form">
+    <div class="field">
+      <label>Décrivez-nous votre problème juridique</label>
+      <textarea></textarea>
+    </div>
+    <button class="ui button" type="submit" [disabled]="is_processed">
+      Enregistrer ma requête
+    </button>
+  </form>
+</div>

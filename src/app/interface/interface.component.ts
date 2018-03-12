@@ -15,7 +15,7 @@ export class InterfaceComponent implements OnInit {
   private is_end: boolean;
 
   constructor(private questionService: QuestionService) {
-    this.question_ids = [1];
+    this.question_ids = [];
     this.is_end = false;
   }
 
