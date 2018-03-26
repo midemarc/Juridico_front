@@ -12,11 +12,11 @@ import { Reponse } from '../reponse';
 })
 export class QuestionComponent implements OnInit {
   @Input() idx: number;
-  private question: Question;
-  private error: boolean;
-  private error_type: string;
-  private question_id: number;
-  private submitted: boolean;
+  private _question: Question;
+  private _error: boolean;
+  private _error_type: string;
+  private _question_id: number;
+  private _submitted: boolean;
 
   constructor(
     private questionService: QuestionService,
@@ -46,7 +46,7 @@ export class QuestionComponent implements OnInit {
   }
 
   handleError(error: HttpErrorResponse): void {
-    this.error = true;
+    this._error = true;
     if (error.status === 404) {
       this.error_type = '404';
     } else if (error.statusText === 'Unknown Error') {
@@ -75,6 +75,50 @@ export class QuestionComponent implements OnInit {
       error => this_error = error
     );
     const a = 1;
+  }
+
+  public get question(): Question {
+    return this._question;
+  }
+
+  public set question(question: Question) {
+    this._question = question;
+  }
+
+
+  public get error(): boolean {
+    return this._error;
+  }
+
+  public set error(value: boolean) {
+    this._error = value;
+  }
+
+
+  public get error_type(): string {
+    return this._error_type;
+  }
+
+  public set error_type(value: string) {
+    this._error_type = value;
+  }
+
+
+  public get submitted(): boolean {
+    return this._submitted;
+  }
+
+  public set submitted(value: boolean) {
+    this._submitted = value;
+  }
+
+
+  public get question_id(): number {
+    return this._question_id;
+  }
+
+  public set question_id(value: number) {
+    this._question_id = value;
   }
 
 }

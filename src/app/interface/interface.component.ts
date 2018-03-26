@@ -9,7 +9,7 @@ import { Question } from '../question';
   styleUrls: ['./interface.component.css']
 })
 export class InterfaceComponent implements OnInit {
-  private question_ids: number[];
+  private _question_ids: number[];
   private questions: Question[];
 
   constructor() {
@@ -17,6 +17,15 @@ export class InterfaceComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+
+  public get question_ids(): number[] {
+    return this._question_ids;
+  }
+
+  public set question_ids(value: number[]) {
+    this._question_ids = value;
   }
 
 }
