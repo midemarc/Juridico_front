@@ -1,3 +1,13 @@
-<div *ngFor="let id of question_ids">
-  <app-question [idx]="id"></app-question>
+<div class="ui container">
+  <h1>
+    Juridico
+  </h1>
 </div>
+
+<app-request (processedRequest)="getNextQuestion($event)"></app-request>
+
+<div *ngFor="let id of question_ids">
+  <app-question [idx]="id" (answerSubmittedEvent)="getNextQuestion($event)"></app-question>
+</div>
+
+<app-results *ngIf="is_end"></app-results>

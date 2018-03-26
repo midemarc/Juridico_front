@@ -19,11 +19,11 @@ export class ReponseService {
       'http://localhost:8000/juridico/api/reponses',
       reponse
     )
-    .toPromise()
-    .then(
-      data => { console.log(data); },
-      error => { console.log(error); }
-    );
+    .toPromise();
+    // .then(
+    //   data => { console.log(data); },
+    //   error => { console.log(error); }
+    // );
     // .toPromise()
     // .then(data => console.log(data))
     // .catch(error => this.handleError);
