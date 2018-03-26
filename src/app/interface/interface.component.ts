@@ -12,7 +12,7 @@ import { Question } from '../question';
 export class InterfaceComponent implements OnInit {
   private _question_ids: number[];
   private questions: Question[];
-  private is_end: boolean;
+  private _is_end: boolean;
 
   constructor(private questionService: QuestionService) {
     this.question_ids = [];
@@ -47,6 +47,14 @@ export class InterfaceComponent implements OnInit {
 
   public set question_ids(value: number[]) {
     this._question_ids = value;
+  }
+
+  public get is_end(): boolean {
+    return this._is_end;
+  }
+
+  public set is_end(value: boolean) {
+    this._is_end = value;
   }
 
 }

@@ -10,9 +10,9 @@ import { ResultsService } from '../results.service';
 })
 export class ResultsComponent implements OnInit {
 
-  private directions: Direction[];
-  private documentations: Documentation[];
-  private organisations: Organisation[];
+  private _directions: Direction[];
+  private _documentations: Documentation[];
+  private _organisations: Organisation[];
 
   constructor(private resultsService: ResultsService) { }
 
@@ -30,6 +30,30 @@ export class ResultsComponent implements OnInit {
         console.error('efefef');
       }
     );
+  }
+
+  public get directions(): Direction[] {
+    return this._directions;
+  }
+
+  public set directions(value: Direction[]) {
+    this._directions = value;
+  }
+
+  public get documentations(): Documentation[] {
+    return this._documentations;
+  }
+
+  public set documentations(value: Documentation[]) {
+    this._documentations = value;
+  }
+
+  public get organisations(): Organisation[] {
+    return this._organisations;
+  }
+
+  public set organisations(value: Organisation[]) {
+    this._organisations = value;
   }
 
 }

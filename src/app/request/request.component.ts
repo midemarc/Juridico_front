@@ -8,7 +8,7 @@ import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 export class RequestComponent implements OnInit {
 
   @Output() processedRequest = new EventEmitter<number>();
-  private is_processed: boolean;
+  private _is_processed: boolean;
 
   constructor() {
     this.is_processed = false;
@@ -34,6 +34,14 @@ export class RequestComponent implements OnInit {
 
   delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  public get is_processed(): boolean {
+    return this._is_processed;
+  }
+
+  public set is_processed(value: boolean) {
+    this._is_processed = value;
   }
 
 }
