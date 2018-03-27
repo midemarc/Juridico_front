@@ -1,7 +1,7 @@
 FROM node:9.9-alpine AS builder
 ADD / /frontend
 WORKDIR /frontend
-RUN npm i && npm run build
+RUN npm i --ignore-scripts && npm run build
 
 FROM nginx:1.13-alpine
 
