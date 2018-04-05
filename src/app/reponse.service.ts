@@ -7,16 +7,22 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { Config } from './config';
+
 
 @Injectable()
 export class ReponseService {
 
-  constructor(private httpClient: HttpClient) { }
+  private config: Config;
+
+  constructor(private httpClient: HttpClient) {
+    this.config = require('./config.json')
+   }
 
   saveReponse(reponse: Reponse) {
     return this.httpClient
     .post(
-      'http://localhost:8000/juridico/api/reponses',
+      this.config.api_endpoint + '/juridico/api/reponses',
       reponse
     )
     .toPromise();
