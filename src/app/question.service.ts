@@ -6,18 +6,16 @@ import { of } from 'rxjs/observable/of';
 import { Question } from './question';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 
-import { Config } from './config';
+import { environment } from '../environments/environment'; 
 // import { MessageService } from './message.service';
 
 @Injectable()
 export class QuestionService {
 
   private requeteID: number;
-  private config: Config;
 
   constructor(private httpClient: HttpClient) {
     this.requeteID = 1;
-    this.config = require('./config.json')
   }
 
   getQuestion(question_id: number): Promise<Question> {
@@ -25,7 +23,7 @@ export class QuestionService {
     // question1: list
     // question3: date
     return this.httpClient
-      .get<Question>(this.config.api_endpoint + '/juridico/api/questions' + question_id)
+      .get<Question>(environment.api_endpoint + '/juridico/api/questions' + question_id)
       .toPromise()
       .then()
       .catch(this.handleError);
@@ -41,7 +39,7 @@ export class QuestionService {
       params
     };
     return this.httpClient
-      .get<number>(this.config.api_endpoint + '/juridico/api/next_question', options)
+      .get<number>(environment.api_endpoint + '/juridico/api/next_question', options)
       .toPromise()
       .catch(this.handleError);
   }

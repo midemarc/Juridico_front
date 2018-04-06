@@ -7,22 +7,18 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { Config } from './config';
+import { environment } from '../environments/environment'; 
 
 
 @Injectable()
 export class ReponseService {
 
-  private config: Config;
-
-  constructor(private httpClient: HttpClient) {
-    this.config = require('./config.json')
-   }
+  constructor(private httpClient: HttpClient) { }
 
   saveReponse(reponse: Reponse) {
     return this.httpClient
     .post(
-      this.config.api_endpoint + '/juridico/api/reponses',
+      environment.api_endpoint + '/juridico/api/reponses',
       reponse
     )
     .toPromise();
