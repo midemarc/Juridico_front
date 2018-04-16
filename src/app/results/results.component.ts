@@ -22,9 +22,9 @@ export class ResultsComponent implements OnInit {
       data => {
         console.log('salut');
         console.log('data: ' + JSON.stringify(data));
-        this.directions = data[0]['directions'];
-        this.documentations = data[0]['documentations'];
-        this.organisations = data[0]['organisations'];
+        this.directions = data['directions'];
+        this.documentations = data['documentations'];
+        this.organisations = data['organisations'];
       },
       error => {
         console.error('efefef');
