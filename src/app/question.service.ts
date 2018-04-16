@@ -6,7 +6,7 @@ import { of } from 'rxjs/observable/of';
 import { Question } from './question';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 
-import { environment } from '../environments/environment'; 
+import { environment } from '../environments/environment';
 // import { MessageService } from './message.service';
 
 @Injectable()
@@ -16,6 +16,7 @@ export class QuestionService {
 
   constructor(private httpClient: HttpClient) {
     this.requeteID = 1;
+    //TODO: Changer ça pour que chaque nouvelle requête soit nouvelle (sinon, ça peut boguer)
   }
 
   getQuestion(question_id: number): Promise<Question> {

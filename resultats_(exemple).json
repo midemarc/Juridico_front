@@ -1,0 +1,218 @@
+{
+  "directions": [
+    {
+      "resid": 3,
+      "description": "Vous avez reçu un “Avis de réparation ou amélioration majeure”. Cet avis est nécessaire lorsque le propriétaire souhaite apporter des améliorations ou de faire des réparations majeures touchant votre logement."
+    },
+    {
+      "resid": 2,
+      "description": "Vous avez reçu un avis de reprise de logement. Votre propriétaire doit vous faire parvenir un tel avis écrit pour vous informer de son intention de reprendre le logement pour lui-même ou pour un membre de sa famille (soit ses enfants, ses parents ou une personne directement à sa charge)."
+    },
+    {
+      "resid": 8,
+      "description": "\"Selon l'information que vous nous avez fourni, l'avis de votre propriétaire respecte les délais (envoyé entre 3 et 6 mois avant la fin du bail).\""
+    },
+    {
+      "resid": 11,
+      "description": "<p>Vous disposez d’un mois pour répondre à cet avis. Donc, vous avez jusqu’au 22 avril 2018 (soit 20 jours).</p>\r\n        <p>Vous pouvez communiquer votre refus ou votre acceptation de la modification. Si vous ne répondez pas à l’avis, cela équivaudra à une acceptation des modifications.</p>\r\n        <p>Si vous acceptez la modification, celle-ci prendra effet au terme de la durée du bail qui sera donc reconduit suivant les nouvelles modalités acceptées.</p>\r\n        <p>Si vous refusez la modification, votre bail est tout de même reconduit et vous garder votre logement. À ce moment, vous pouvez:</p>\r\n        <ul>\r\n            <li>Essayer de vous entendre avec votre propriétaire pour une hausse que vous seriez capable d’accepter.</li>\r\n            <li>Ne rien faire. Et dans ce cas, il est possible que votre propriétaire laisse tomber, comme il est possible qu’il s’adresse à la Régie du logement s’il souhaite quand même augmenter le loyer.</li>\r\n            <li>Si vous refusez la modification, votre bail est tout de même reconduit et vous garder votre logement.</li>\r\n            <li>Si le propriétaire s’adresse à la Régie du logement, celle-ci vous transmettra un avis d’audience en temps et lieu.</li>\r\n        </ul>"
+    },
+    {
+      "resid": 10,
+      "description": "<p>Selon les informations fournies, l’avis que votre propriétaire vous a envoyé n’est pas valide, car il ne respecte pas les délais.</p>\r\n        <p>Ainsi, vous pouvez répondre qu’il n’est pas valide ou ne rien répondre.</p>"
+    }
+  ],
+  "documentation": [
+    {
+      "resid": 219,
+      "nom": "Le renouvellement de bail et la hausse de loyer",
+      "url": "https://www.educaloi.qc.ca/capsules/le-renouvellement-de-bail-et-la-hausse-de-loyer",
+      "description": "Vous êtes tranquillement assis sur votre balcon par un beau soir du mois de mai lorsque votre propriétaire vient vous rendre visite. Il vous annonce qu'à partir du 1er juillet, vous devrez payer 630 $ au lieu de 580 $ pour votre logement.",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 363,
+      "nom": "Informations sur les réparations majeures en logement",
+      "url": "https://www.rdl.gouv.qc.ca/fr/le-logement/travaux-majeurs",
+      "description": "Informations sur les réparations majeures en logement",
+      "source": "Régie du logement"
+    },
+    {
+      "resid": 223,
+      "nom": "La reprise du logement et l’éviction",
+      "url": "https://www.educaloi.qc.ca/capsules/la-reprise-du-logement-et-leviction",
+      "description": "Vous habitez paisiblement votre logement depuis quelques temps. Vous l’avez aménagé à votre goût, le loyer vous convient, l’entourage vous plaît, vous n’avez nulle intention de le quitter.",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 144,
+      "nom": "Les abonnements à un gym ou à une clinique minceur",
+      "url": "https://www.educaloi.qc.ca/capsules/les-abonnements-un-gym-ou-une-clinique-minceur",
+      "description": "De nos jours, avec toute la pression sociale pour être beau, mince et en forme, il est facile de succomber à l'offre d'un centre de conditionnement physique (« gym ») ou d'une clinique d'amaigrissement (« clinique minceur »).",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 262,
+      "nom": "Collision avec un animal: que faire?",
+      "url": "https://www.educaloi.qc.ca/capsules/collision-avec-un-animal-que-faire",
+      "description": "Sur nos routes, des animaux domestiques ou sauvages peuvent traverser à tout moment. Chien, chat, écureuil, cerf… Au Québec, si vous frappez un animal avec votre véhicule, quelles sont vos obligations?  ",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 288,
+      "nom": "La pornographie juvénile",
+      "url": "https://www.educaloi.qc.ca/capsules/la-pornographie-juvenile",
+      "description": "Plusieurs lois concernant la pornographie juvénile ont été adoptées ou renforcées dans le but de protéger les enfants et les adolescents de moins de 18 ans. Voici un aperçu des différentes infractions criminelles en lien avec la pornographie juvénile.  ",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 284,
+      "nom": "Les infractions reliées à certaines drogues",
+      "url": "https://www.educaloi.qc.ca/capsules/les-infractions-reliees-certaines-drogues",
+      "description": "Les principales drogues interdites au Canada",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 26,
+      "nom": "Les conjoints de même sexe et la loi",
+      "url": "https://www.educaloi.qc.ca/capsules/les-conjoints-de-meme-sexe-et-la-loi",
+      "description": "Depuis quelques années, on note plusieurs changements importants en matière d’égalité pour les gais et lesbiennes du Québec. Devant ces nombreux changements législatifs, il n'est pas toujours facile de comprendre les différentes protections dont jouissent maintenant les couples de même sexe.",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 211,
+      "nom": "Logement: la discrimination est interdite",
+      "url": "https://www.educaloi.qc.ca/capsules/logement-la-discrimination-est-interdite",
+      "description": "La discrimination dans le domaine du logement est interdite au Québec.",
+      "source": "Éducaloi"
+    },
+    {
+      "resid": 182,
+      "nom": "Les agences de recouvrement",
+      "url": "https://www.educaloi.qc.ca/capsules/les-agences-de-recouvrement",
+      "description": "Les agences de recouvrement sont des entreprises chargées par d’autres entreprises de récupérer leurs comptes impayés. Leurs employés, ou autres « agents de recouvrement », sont soumis à des règles précises.",
+      "source": "Éducaloi"
+    }
+  ],
+  "organisations": [
+    {
+      "resid": 1,
+      "nom": "Me Raphaëlle Desvignes",
+      "url": "",
+      "description": "",
+      "code_postal": "H2Y3Y7",
+      "adresse": "4, rue Notre-Dame Est, Montréal, Qc, bureau 505",
+      "courriel": "",
+      "telephone": "(514) 303-2112",
+      "telecopieur": "",
+      "heures_ouverture": ""
+    },
+    {
+      "resid": 38,
+      "nom": "Entraide Logement Hochelaga-Maisonneuve",
+      "url": "https://logement-hochelaga-maisonneuve.org/entraide-logement",
+      "description": "La mission d’Entraide Logement Hochelaga-Maisonneuve est d’informer la population locataire d’Hochelaga-Maisonneuve sur ses droits et obligations en matière de logement locatif en plus d’aider les locataires dans les démarches nécessaires en vue de résoudre leur problème de logement.",
+      "code_postal": "H1V2S5",
+      "adresse": "1475-2, rue Bennett, Montréal, QC",
+      "courriel": "elhm@cam.org",
+      "telephone": "(514) 528-1634",
+      "telecopieur": "(514) 523-8637",
+      "heures_ouverture": "Lundi au jeudi, de 13h00 à 16h00."
+    },
+    {
+      "resid": 39,
+      "nom": "Comité BAILS Hochelaga-Maisonneuve",
+      "url": "https://logement-hochelaga-maisonneuve.org/comite-bails",
+      "description": "Créé en 1993, le Comité de base pour l’action et l’information sur le logement social d’Hochelaga-Maisonneuve (Comité BAILS HM) contribue à la promotion du logement social et la défense collective des droits des mal-logés.\r\n\r\nLe Comité BAILS HM offre les services suivants :\r\n\r\n* Atelier d’information sur le logement social;\r\n* Inscription sur les listes de HLM et Coopératives d’habitation;\r\n* Mise sur pied de comités de requérant(e)s pour les projets de Coop ; suivi et support;\r\n* Listes de demandeurs de Coop pour les coopératives d’habitation qui sont à la recherche de personnes.\r\n\r\nFrais d’inscription: 3 $ pour la carte de membre.",
+      "code_postal": "H1V2S5",
+      "adresse": "1475-1 rue Bennett, Montréal, QC (sonnette du bas)",
+      "courriel": "info@comite-bails.org",
+      "telephone": "514 522-1817",
+      "telecopieur": "",
+      "heures_ouverture": "Lundi au jeudi, de 13h30 à 16h30"
+    },
+    {
+      "resid": 34,
+      "nom": "Comité logement de Rosemont",
+      "url": "http://www.comitelogement.org/",
+      "description": "Le Comité logement Rosemont est un organisme à but non lucratif de défense des droits des locataires et de promotion du logement social dans le quartier Rosemont.",
+      "code_postal": "H1X2X2",
+      "adresse": "5350, Lafond, Montréal, QC, local R-145",
+      "courriel": "info@comitelogement.org",
+      "telephone": "(514) 597-2581",
+      "telecopieur": "(514) 524-9813",
+      "heures_ouverture": ""
+    },
+    {
+      "resid": 31,
+      "nom": "Comité logement Ville-Marie",
+      "url": "",
+      "description": "Le Comité logement Ville-Marie est une organisation populaire qui œuvre à la défense des droits des locataires, au développement du logement social et, de façon plus générale, à l’amélioration de la qualité de vie des résidents de l’arrondissement de Ville-Marie.",
+      "code_postal": "H2L3E7",
+      "adresse": "1710, rue Beaudry, Montréal, Qc, local 2.6",
+      "courriel": "info@clvm.org",
+      "telephone": "(514) 521-5992",
+      "telecopieur": "(514) 521-1386",
+      "heures_ouverture": "Le Comité logement Ville-Marie accueille les locataires du mardi au jeudi, de 13h30 à 16h30."
+    },
+    {
+      "resid": 0,
+      "nom": "Me Émilie Charette",
+      "url": "",
+      "description": "",
+      "code_postal": "H2L3E5",
+      "adresse": "1406 Beaudry, Montréal, Québec",
+      "courriel": "e.charette@ouelletnadon.qc.ca",
+      "telephone": "514-528-7228",
+      "telecopieur": "514-528-1353",
+      "heures_ouverture": ""
+    },
+    {
+      "resid": 4,
+      "nom": "Me Claude Cousineau",
+      "url": "",
+      "description": "",
+      "code_postal": "H2L3E5",
+      "adresse": "1406 Beaudry, Montréal, Québec",
+      "courriel": "",
+      "telephone": "514-528-7228",
+      "telecopieur": "514-528-1353",
+      "heures_ouverture": ""
+    },
+    {
+      "resid": 5,
+      "nom": "Me Andrée Bourbeau",
+      "url": "",
+      "description": "",
+      "code_postal": "H2L3E5",
+      "adresse": "1406 Beaudry, Montréal, Québec",
+      "courriel": "a.bourbeau@ouelletnadon.qc.ca",
+      "telephone": "514-528-7228",
+      "telecopieur": "514-528-1353",
+      "heures_ouverture": ""
+    },
+    {
+      "resid": 35,
+      "nom": "Comité logement du Plateau Mont-Royal",
+      "url": "http://clpmr.com/",
+      "description": "Le CLPMR a pour mission de défendre les droits des locataires du Plateau Mont-Royal et de promouvoir le développement de logements sociaux comme une alternative au marché locatif privé.",
+      "code_postal": "H2J2W9",
+      "adresse": "4450, St-Hubert, Montréal, QC",
+      "courriel": "clplateau@clpmr.com",
+      "telephone": "(514) 527-3495",
+      "telecopieur": "(514) 527-6653",
+      "heures_ouverture": "Lundi : 9h00 à 12h00 - 13h30 à 17h00\r\nMardi : 9h00 à 12h00\r\nMercredi : 9h00 à 12h00 - 13h30 à 17h00\r\nJeudi : 9h00 à 12h00 - 13h30 à 17h00"
+    },
+    {
+      "resid": 17,
+      "nom": "Clinique juridique de l’UQAM",
+      "url": "http://cliniquejuridique.uqam.ca",
+      "description": "Information juridique (droit civil, droit de la famille, droit des affaires) donnée par des étudiant-e-s en droit durant l’année scolaire. Sur rendez-vous seulement.",
+      "code_postal": "H2X1L7",
+      "adresse": "Pavillon J.A. DeSève (DS), 320, rue Sainte-Catherine Est,  Montréal, Qc, local DS-3255",
+      "courriel": "cliniquejuridique@gmail.com",
+      "telephone": "(514) 987-6760",
+      "telecopieur": "",
+      "heures_ouverture": "Heures d’ouverture sur rendez-vous seulement"
+    }
+  ]
+}
