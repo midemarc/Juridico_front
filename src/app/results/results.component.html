@@ -13,8 +13,7 @@
                 <span class="url">{{dir.url}}</span>
                 <span class="quand">{{dir.quand}}</span>
               </div>
-              <div class="description">
-                {{dir.description}} {{dir.commentaires}}
+              <div class="description" [innerHTML]="dir.description">
               </div>
             </div>
           </div>
