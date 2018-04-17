@@ -23,7 +23,7 @@ export class ResultsComponent implements OnInit {
         console.log('salut');
         console.log('data: ' + JSON.stringify(data));
         this.directions = data['directions'];
-        this.documentations = data['documentations'];
+        this.documentations = data['documentation'];
         this.organisations = data['organisations'];
       },
       error => {
