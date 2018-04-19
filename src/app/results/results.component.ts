@@ -16,7 +16,7 @@ export class ResultsComponent implements OnInit {
 
   constructor(private resultsService: ResultsService) { }
 
-  @ViewChildren('boiteresultats') boiteresultats: QueryList;
+  @ViewChildren('boiteresultats') boiteresultats: QueryList<any>;
 
   ngOnInit() {
     console.log('coucou');
