@@ -11,16 +11,13 @@ import { environment } from '../environments/environment';
 @Injectable()
 export class ResultsService {
 
-  private requeteID: number;
 
   constructor(private httpClient: HttpClient) {
-    this.requeteID = 1;
-    //TODO: Changer ça pour que chaque nouvelle requête soit nouvelle (sinon, ça peut boguer)
   }
 
-  getResults(): Promise<Result[]> {
+  getResults(requeteID: number): Promise<Result[]> {
     const params = new HttpParams()
-      .set('reqid', String(this.requeteID));
+      .set('reqid', String(requeteID));
     const options = {
       params
     };

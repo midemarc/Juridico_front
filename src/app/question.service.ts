@@ -19,6 +19,29 @@ export class QuestionService {
     //TODO: Changer ça pour que chaque nouvelle requête soit nouvelle (sinon, ça peut boguer)
   }
 
+  getRequeteID() {
+    return this.requeteID;
+  }
+
+  getNouvRequete(description_cas: string, client_id: number): number {
+    const params = new HttpParams()
+      .set("cid", String('1'))
+      .set("description_cas", description_cas);
+    const options = { params };
+    this.httpClient
+      .get<number>(environment.api_endpoint +'/juridico/api/nouv_requete', options)
+      .toPromise()
+      .then(data => {
+        console.log("Requete id (pt1):" + data['requete_id']);
+        this.requeteID = data['requete_id'];
+      })
+      .catch(this.handleError);
+
+    console.log("Requete id (pt2):" + this.requeteID);
+
+    return this.requeteID;
+  }
+
   getQuestion(question_id: number): Promise<Question> {
     // question19: text
     // question1: list

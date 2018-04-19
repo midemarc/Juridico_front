@@ -35,6 +35,8 @@ export class QuestionComponent implements OnInit {
     this.getQuestion();
   }
 
+  // Les fonctions ngAfterViewInit et scrollToBottom servent à scroller jusqu'à
+  // la fin pour afficher la question qui vient d'être ajoutée
   ngAfterViewInit() {
     this.boitesquestion.changes.subscribe(this.scrollToBottom);
   }
@@ -77,7 +79,7 @@ export class QuestionComponent implements OnInit {
     this.submitted = true;
     const reponse: Reponse = {
       question: this.question.qid,
-      requete: 1,
+      requete: this.questionService.getRequeteID(),
       reponse: this.question.answer
     };
     let reponse_saved;

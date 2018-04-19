@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChildren, QueryList, AfterViewChecked } from '@a
 
 import { Direction, Documentation, Organisation } from '../results';
 import { ResultsService } from '../results.service';
+import { QuestionService } from '../question.service';
+
 
 @Component({
   selector: 'app-results',
@@ -14,13 +16,16 @@ export class ResultsComponent implements OnInit {
   private _documentations: Documentation[];
   private _organisations: Organisation[];
 
-  constructor(private resultsService: ResultsService) { }
+  constructor(
+    private resultsService: ResultsService,
+    private questionService: QuestionService
+  ) { }
 
   @ViewChildren('boiteresultats') boiteresultats: QueryList<any>;
 
   ngOnInit() {
     console.log('coucou');
-    this.resultsService.getResults().then(
+    this.resultsService.getResults(this.questionService.getRequeteID()).then(
       data => {
         console.log('salut');
         console.log('data: ' + JSON.stringify(data));

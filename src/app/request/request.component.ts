@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { QuestionService } from '../question.service';
 
 @Component({
   selector: 'app-request',
@@ -9,8 +10,9 @@ export class RequestComponent implements OnInit {
 
   @Output() processedRequest = new EventEmitter<number>();
   private _is_processed: boolean;
+  public requete_texte: string;
 
-  constructor() {
+  constructor(private questionService: QuestionService) {
     this.is_processed = false;
   }
 
@@ -18,6 +20,8 @@ export class RequestComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.questionService.getNouvRequete(this.requete_texte, 1);
+
     // setTimeout(this.emit, 1000);
     // await this.delay(1000);
     this.delay(1000).then(

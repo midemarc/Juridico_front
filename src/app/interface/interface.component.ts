@@ -13,6 +13,7 @@ export class InterfaceComponent implements OnInit {
   private _question_ids: number[];
   private questions: Question[];
   private _is_end: boolean;
+  private requete_id: number;
 
   constructor(private questionService: QuestionService) {
     this.question_ids = [];
@@ -28,6 +29,7 @@ export class InterfaceComponent implements OnInit {
    */
   getNextQuestion(previousQuestionAnswerID: number): void {
     console.log('getNextQuestionID() ' + previousQuestionAnswerID);
+
     this.questionService.getNextQuestionID(previousQuestionAnswerID)
       .then(data => {
         const question_id = data['question_id'];
