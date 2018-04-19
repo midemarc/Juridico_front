@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, AfterViewChecked } from '@angular/core';
 
 import { Direction, Documentation, Organisation } from '../results';
 import { ResultsService } from '../results.service';
@@ -16,6 +16,8 @@ export class ResultsComponent implements OnInit {
 
   constructor(private resultsService: ResultsService) { }
 
+  @ViewChildren('boiteresultats') boiteresultats: QueryList;
+
   ngOnInit() {
     console.log('coucou');
     this.resultsService.getResults().then(
@@ -30,6 +32,15 @@ export class ResultsComponent implements OnInit {
         console.error('efefef');
       }
     );
+
+  }
+
+  ngAfterViewInit() {
+    this.boiteresultats.changes.subscribe(this.scrollToResultats)
+  }
+
+  scrollToResultats = () => {
+    document.getElementById("boiteresultats").scrollIntoView();
   }
 
   public get directions(): Direction[] {

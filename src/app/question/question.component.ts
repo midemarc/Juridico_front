@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { AfterViewChecked, QueryList, ViewChildren, Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { Question } from '../question';
 import { QuestionService } from '../question.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -19,6 +19,8 @@ export class QuestionComponent implements OnInit {
   private _question_id: number;
   private _submitted: boolean;
 
+  @ViewChildren('boitequestion') boitesquestion: QueryList<any>;
+
   constructor(
     private questionService: QuestionService,
     private reponseService: ReponseService
@@ -31,6 +33,16 @@ export class QuestionComponent implements OnInit {
     this.question_id = 1;
     this.submitted = false;
     this.getQuestion();
+  }
+
+  ngAfterViewInit() {
+    this.boitesquestion.changes.subscribe(this.scrollToBottom);
+  }
+
+  scrollToBottom = () => {
+  try {
+    window.scrollTo(0,document.body.scrollHeight);
+  } catch (err) {}
   }
 
   getQuestion(): void {

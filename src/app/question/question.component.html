@@ -1,4 +1,4 @@
-<div class="ui raised container segment">
+<div class="ui raised container segment" #boitequestion>
   <form *ngIf="!error" class="ui form" (ngSubmit)="onSubmit()" #questionForm="ngForm">
     <div class="field">
     <label>{{ question?.question }}</label>
