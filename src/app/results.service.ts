@@ -17,7 +17,9 @@ export class ResultsService {
 
   getResults(requeteID: number): Promise<Result[]> {
     const params = new HttpParams()
-      .set('reqid', String(requeteID));
+      .set('reqid', String(requeteID))
+      .set('compte_desire_docu', String('5'))
+      .set('compte_desire_orgs', String('5'));
     const options = {
       params
     };
