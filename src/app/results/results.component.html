@@ -24,6 +24,35 @@
     <sui-accordion-panel [isOpen]="true">
       <div title>
         <i class="dropdown icon"></i>
+        Organisations
+      </div>
+      <div content>
+        <div class="ui items">
+          <div *ngFor="let org of organisations" class="item">
+            <div class="ui raised segment">
+              <div class="content">
+                <a class="header">
+                  {{org.nom}}
+                </a>
+                <div class="meta">
+                  <span class="url">{{org.url}}</span>
+                  <span class="courriel">{{org.courriel}}</span>
+                  <span class="code_postal">{{org.code_postal}}</span>
+                  <span class="addresse">{{org.adresse}}</span>
+                </div>
+                <div class="description">
+                  {{org.description}} {{org.commentaires}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </sui-accordion-panel>
+
+    <sui-accordion-panel [isOpen]="true">
+      <div title>
+        <i class="dropdown icon"></i>
         Documentation
       </div>
       <div content>
@@ -57,33 +86,6 @@
       </div>
     </sui-accordion-panel>
 
-    <sui-accordion-panel [isOpen]="true">
-      <div title>
-        <i class="dropdown icon"></i>
-        Organisations
-      </div>
-      <div content>
-        <div class="ui items">
-          <div *ngFor="let org of organisations" class="item">
-            <div class="ui raised segment">
-              <div class="content">
-                <a class="header">
-                  {{org.nom}}
-                </a>
-                <div class="meta">
-                  <span class="url">{{org.url}}</span>
-                  <span class="courriel">{{org.courriel}}</span>
-                  <span class="code_postal">{{org.code_postal}}</span>
-                  <span class="addresse">{{org.adresse}}</span>
-                </div>
-                <div class="description">
-                  {{org.description}} {{org.commentaires}}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </sui-accordion-panel>
-  </sui-accordion>
+    </sui-accordion>
+
 </div>
