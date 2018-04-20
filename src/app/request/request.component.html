@@ -2,7 +2,7 @@
   <form (ngSubmit)="onSubmit()" class="ui form">
     <div class="field">
       <label>Décrivez-nous votre problème juridique</label>
-      <textarea [(ngModel)]="requete_texte" placeholder="requete_texte" name="entree_requete"></textarea>
+      <textarea [(ngModel)]="requete_texte" placeholder="Votre problème juridique" name="entree_requete"></textarea>
     </div>
     <button class="ui button" type="submit" [disabled]="is_processed">
       Enregistrer ma requête
