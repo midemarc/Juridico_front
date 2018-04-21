@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChildren, QueryList, AfterViewChecked } from '@angular/core';
 
-import { Direction, Documentation, Organisation } from '../results';
+import { Direction, Documentation, Organisation, Result } from '../results';
 import { ResultsService } from '../results.service';
 import { QuestionService } from '../question.service';
 
@@ -21,11 +21,14 @@ export class ResultsComponent implements OnInit {
     private questionService: QuestionService
   ) { }
 
+  public data: Promise<Result[]>;
+
   @ViewChildren('boiteresultats') boiteresultats: QueryList<any>;
 
   ngOnInit() {
     console.log('coucou');
-    this.resultsService.getResults(this.questionService.getRequeteID()).then(
+    this.data = this.resultsService.getResults(this.questionService.getRequeteID());
+    this.data.then(
       data => {
         console.log('salut');
         console.log('data: ' + JSON.stringify(data));

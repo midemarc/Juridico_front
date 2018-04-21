@@ -1,4 +1,4 @@
-<div class="ui raised container segment" #boiteresultats id="boiteresultats">
+<div class="ui raised container segment" #boiteresultats id="boiteresultats" *ngIf="data | async; else loading">
   <sui-accordion [closeOthers]="false">
     <sui-accordion-panel [isOpen]="true">
       <div title>
@@ -110,5 +110,10 @@
     </sui-accordion-panel>
 
     </sui-accordion>
-
 </div>
+
+<ng-template #loading>
+<div class="ui raised container segment">
+  Chargement...
+</div>
+</ng-template>
