@@ -40,6 +40,7 @@
             <div class="ui raised segment" style="width: 100%">
               <div class="content">
                 <a class="header">
+                  <i class="icon balance" *ngIf="org.tags.includes(11)"></i>
                   {{org.nom}}
                 </a>
                 <div class="meta">
@@ -51,6 +52,10 @@
                 <div class="description">
                   {{org.description}} {{org.commentaires}}
                 </div>
+                <button class="ui button" *ngIf="org.tags.includes(11)">
+                  <i class="icon envelope"></i>
+                  Contacter
+                </button>
               </div>
             </div>
           </div>
