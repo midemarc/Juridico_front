@@ -52,10 +52,16 @@
                 <div class="description">
                   {{org.description}} {{org.commentaires}}
                 </div>
-                <button class="ui button" *ngIf="org.tags.includes(11)">
-                  <i class="icon envelope"></i>
-                  Contacter
-                </button>
+                <div *ngIf="org.tags.includes(11)">
+                  <button class="ui button">
+                    <i class="icon envelope"></i>
+                    Contacter
+                  </button>
+                  <button class="ui button">
+                    <i class="icon calendar"></i>
+                    Prendre rendez-vous
+                  </button>
+                </div>
               </div>
             </div>
           </div>
