@@ -3,11 +3,15 @@
     <sui-accordion-panel [isOpen]="true">
       <div title>
         <i class="dropdown icon"></i>
-        Directions
+        <i class="info circle icon"></i>
+        Quelques informations importantes
+        ({{directions.length}}
+        <span *ngIf="directions.length > 1">résultats)</span>
+        <span *ngIf="directions.length < 2">résultats)</span>
       </div>
       <div content>
         <div *ngFor="let dir of directions">
-          <div class="ui raised segment">
+          <div class="ui raised segment" style="width: 100%">
             <div class="content">
               <div class="meta">
                 <span class="url">{{dir.url}}</span>
@@ -21,15 +25,19 @@
       </div>
     </sui-accordion-panel>
 
-    <sui-accordion-panel [isOpen]="true">
+    <sui-accordion-panel [isOpen]="false">
       <div title>
         <i class="dropdown icon"></i>
-        Organisations
+        <i class="address book outline icon"></i>
+        Des gens qui peuvent vous aider
+        ({{organisations.length}}
+        <span *ngIf="organisations.length > 1">résultats)</span>
+        <span *ngIf="organisations.length < 2">résultats)</span>
       </div>
       <div content>
         <div class="ui items">
           <div *ngFor="let org of organisations" class="item">
-            <div class="ui raised segment">
+            <div class="ui raised segment" style="width: 100%">
               <div class="content">
                 <a class="header">
                   {{org.nom}}
@@ -50,15 +58,19 @@
       </div>
     </sui-accordion-panel>
 
-    <sui-accordion-panel [isOpen]="true">
+    <sui-accordion-panel [isOpen]="false">
       <div title>
         <i class="dropdown icon"></i>
+        <i class="file alternate outline icon"></i>
         Documentation
+        ({{documentations.length}}
+        <span *ngIf="documentations.length > 1">résultats)</span>
+        <span *ngIf="documentations.length < 2">résultats)</span>
       </div>
       <div content>
         <div class="ui items">
           <div *ngFor="let doc of documentations" class="item">
-            <div class="ui raised segment">
+            <div class="ui raised segment" style="width: 100%">
               <div class="content">
                 <a class="header">
                   {{doc.nom}}
